@@ -35,7 +35,9 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
     top: 0;
     right: 0;
   }
-  
+  .navbar-links {
+    display: block;
+  }
   /* Show the navbar-toggler on screens smaller than 600px */
   @media (max-width: 600px) {
     .navbar-links {
