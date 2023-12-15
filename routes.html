@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rides - Evolution Cycling</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<style>
-    body {
-        padding-top: 70px; /* Adjust this value based on the height of your navbar */
-        background: linear-gradient(to bottom, #f9f9f9, #fff);
-    }
-    header {
-        display: none;
-    }
-</style>
+    <title>Routes - Evolution Cycling</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="index.html" class="w3-bar-item w3-button"><b> Evolution </b> </a>
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button"><b>Evolution</b> Cycling Club</a>
+      <!-- Hidden links for mobile version -->
+      <div class="w3-right w3-hide-large w3-hide-medium">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleMenu()">☰</a>
+      </div>
+      <!-- Visible links for desktop version -->
+      <div class="navbar-links w3-right w3-hide-small">
         <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
         <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
-        <a href="#roster" class="w3-bar-item w3-button">Roster</a>
-        <a href="#sponsors" class="w3-bar-item w3-button">Sponsors</a>
+        <a href="#about" class="w3-bar-item w3-button">About Us</a>
+        <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
       </div>
     </div>
   </div>
+  
+  <!-- Mobile Menu (hidden by default and toggled via hamburger icon) -->
+  <div id="mobile-menu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+    <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+    <a href="#about" class="w3-bar-item w3-button">About Us</a>
+    <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+  
+  <!-- Script to toggle the mobile menu -->
+  <script>
+  function toggleMenu() {
+    var x = document.getElementById('mobile-menu');
+    if (x.className.indexOf('w3-show') == -1) {
+      x.className += ' w3-show';
+    } else { 
+      x.className = x.className.replace(' w3-show', '');
+    }
+  }
+  </script>
+    <!-- Page Content -->
+        <main class="routes-container">
+            <h1> <b>Sunday Route </b></h3>
+                <div class="route-container">
+                    <div class="route-description">
+                        <h3>Evolution Sunday Winter Route</h3>
+                        <p> On Sundays, we do our variation on the classic northern shore cycling route. The winter version skips the sprints along Green Bay road, opting to take Sheridan  back to the city.</p>
+                    </div>
+                    <div class="strava-embed">
+                        <div style="transform: scale(0.8); transform-origin: 0 0;">
+                            <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3170428392194366344" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                        </div>
+                    </div>
+                </div>    
+            </main>
 
+            <main class="routes-container">
 
-
-<!-- Page Content -->
-<main>
-<h1> <b>Sunday Route </b></h3>
-    <div class="route-container">
-        <div class="route-description">
-            <h3>Evolution Sunday Winter Route</h3>
-            <p> On Sundays, we do our variation on the classic northern shore cycling route. The winter version skips the sprints along Green Bay road, opting to take Sheridan  back to the city.</p>
-        </div>
-        <div class="strava-embed">
-            <div style="transform: scale(0.8); transform-origin: 0 0;">
-                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3170428392194366344" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
-            </div>
-        </div>
-    </div>
-
-<h1><b>Saturday Routes</b> </h2>
-    <div class="route-container">
-        <div class="route-description">
-            <h3>Arlington Heights</h3>
-        </div>
-        <div class="strava-embed">
-            <div style="transform: scale(0.8); transform-origin: 0 0;">
-                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3106686370004613828" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
-            </div>
-        </div>
-    </div>
-
-    <div class="route-container">
-        <div class="route-description">
-            <h3>Inverness</h3>
-        </div>
-        <div class="strava-embed">
-            <div style="transform: scale(0.8); transform-origin: 0 0;">
-                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="2831001173806468458" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
-            </div>
-        </div>
-    </div>
-    
-    <div class="route-container">
-        <div class="route-description">
-            <h3>Extended Hinsdale Route</h3>
-            <p>There are a few different routes we take to Hinsdale. This is the longer,  "extended" route.</p>
-        </div>
-        <div class="strava-embed">
-            <div style="transform: scale(0.8); transform-origin: 0 0;">
-                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="2819344499925664770" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
-            </div>
-        </div>
-    </div>
-</main>
-
-Looking for other rides around the city? <a href="https://chicagogrouprides.com">Here is </a> for a comprehensive list of rides in the Chicago area maintained by Half Acre Cycling.
-
+                <h1><b>Saturday Routes</b> </h2>
+                    <div class="route-container">
+                        <div class="route-description">
+                            <h3>Arlington Heights</h3>
+                        </div>
+                        <div class="strava-embed">
+                            <div style="transform: scale(0.8); transform-origin: 0 0;">
+                                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="3106686370004613828" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="route-container">
+                        <div class="route-description">
+                            <h3>Inverness</h3>
+                        </div>
+                        <div class="strava-embed">
+                            <div style="transform: scale(0.8); transform-origin: 0 0;">
+                                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="2831001173806468458" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-container">
+                        <div class="route-description">
+                            <h3>Extended Hinsdale Route</h3>
+                            <p>There are a few different routes we take to Hinsdale. This is the longer,  "extended" route.</p>
+                        </div>
+                        <div class="strava-embed">
+                            <div style="transform: scale(0.8); transform-origin: 0 0;">
+                                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="2819344499925664770" data-full-width="false" data-hide-elevation="true" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+    <!-- Existing scripts and additional page content here... -->
 </body>
 </html>

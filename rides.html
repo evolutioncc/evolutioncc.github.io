@@ -20,45 +20,77 @@ header {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b> Evolution </b> </a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Evolution</b> Cycling Club</a>
+    <!-- Hidden links for mobile version -->
+    <div class="w3-right w3-hide-large w3-hide-medium">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleMenu()">☰</a>
+    </div>
+    <!-- Visible links for desktop version -->
+    <div class="navbar-links w3-right w3-hide-small">
       <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
       <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
-      <a href="#roster" class="w3-bar-item w3-button">Roster</a>
-      <a href="#sponsors" class="w3-bar-item w3-button">Sponsors</a>
+      <a href="#about" class="w3-bar-item w3-button">About Us</a>
+      <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
 </div>
 
+<!-- Mobile Menu (hidden by default and toggled via hamburger icon) -->
+<div id="mobile-menu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+  <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+  <a href="#about" class="w3-bar-item w3-button">About Us</a>
+  <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<!-- Script to toggle the mobile menu -->
+<script>
+function toggleMenu() {
+  var x = document.getElementById('mobile-menu');
+  if (x.className.indexOf('w3-show') == -1) {
+    x.className += ' w3-show';
+  } else { 
+    x.className = x.className.replace(' w3-show', '');
+  }
+}
+</script>
+
+
 
 <!-- Page Content -->
-<main>
-    <h1><b>Saturday Ride</b></h2>
-    <p> <b> Start time:</b> 8:00 AM </p>
-    <p> <b> Start location:</b> Walgreens Parking Lot in Andersonville. 5440 N Clark St, Chicago, IL 60640 </p>
-    <p> <b> Distance:</b> 50-70 miles </p>
-    <p> <b> Pace:</b> Varied (17-19 mph average). No drop. </p>
-    <p> <b> Route:</b> Rotating route. Check discord for weekly route. </p>
-    <!-- Add more content as needed -->
+<main class="rides-content">
+  <section class="ride-section">
+    <h1>Saturday Ride</h1>
+    <p><strong>Start time:</strong> 8:00 AM</p>
+    <p><strong>Start location:</strong> Walgreens Parking Lot in Andersonville. 5440 N Clark St, Chicago, IL 60640</p>
+    <p><strong>Distance:</strong> 50-70 miles</p>
+    <p><strong>Pace:</strong> Varied (17-19 mph average). No drop.</p>
+    <p><strong>Route:</strong> Rotating route. Check discord for weekly route.</p>
+  </section>
+
+  <section class="ride-section">
+    <h1>Sunday Ride</h1>
+    <p><strong>Start time:</strong> 8:00 AM</p>
+    <p><strong>Start location:</strong> Walgreens Parking Lot in Andersonville. 5440 N Clark St, Chicago, IL 60640</p>
+    <p><strong>Distance:</strong> 45 miles</p>
+    <p><strong>Pace:</strong> Varied (17-19 mph average). No drop.</p>
+    <p><strong>Route:</strong> North shore route. Check routes page for Sunday route.</p>  </section>
+
+  <section class="ride-section">
+    <h1>Weekday Rides</h1>
+    <p>Weekday rides are on a winter hiatus. We'll pick up our regular weekday rides in the spring.</p>
+  </section>
+
+  <section class="ride-section">
+    <h1>Other Rides</h1>
+    <p>
+  Looking for other rides around the city? <a href="https://chicagogrouprides.com">Here is </a> a comprehensive list of rides in the Chicago area maintained by Half Acre Cycling.
+    </p>
+  </section>
 </main>
 
-<main>
-  <h1><b>Sunday Ride</b></h1>
-  <p> <b> Start time:</b> 8:00 AM </p>
-  <p> <b> Start location:</b> Walgreens Parking Lot in Andersonville. 5440 N Clark St, Chicago, IL 60640 </p>
-  <p> <b> Distance:</b> 45 miles </p>
-  <p> <b> Pace:</b> Varied (17-19 mph average). No drop. </p>
-  <p> <b> Route:</b> North shore route. See routes page for seasonal route. </p>
-
-  <!-- Add more content as needed -->
-</main>
-
-<main>
-  <h1><b>Weekday Rides</b></h1>
-  <p> Weekday rides are on a winter hiatus. We'll pick up our regular weekday rides in the spring.</p>
-  <!-- Add more content as needed -->
-</main>
 
 </body>
 </html>

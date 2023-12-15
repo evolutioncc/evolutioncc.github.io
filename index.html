@@ -23,22 +23,48 @@ header {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>Evolution</b></a>
+    <a href="index.html" class="w3-bar-item w3-button"><b>Evolution</b> CC</a>
+    <!-- Hidden links for mobile version -->
+    <div class="w3-right w3-hide-large w3-hide-medium">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleMenu()">☰</a>
+    </div>
+    <!-- Visible links for desktop version -->
     <div class="navbar-links w3-right w3-hide-small">
       <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
       <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
-      <a href="#roster" class="w3-bar-item w3-button">Roster</a>
-      <a href="#sponsors" class="w3-bar-item w3-button">Sponsors</a>
+      <a href="#about" class="w3-bar-item w3-button">About Us</a>
+      <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
-    <span class="navbar-toggler">☰</span>
   </div>
 </div>
+
+<!-- Mobile Menu (hidden by default and toggled via hamburger icon) -->
+<div id="mobile-menu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+  <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+  <a href="#about" class="w3-bar-item w3-button">About Us</a>
+  <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<!-- Script to toggle the mobile menu -->
+<script>
+function toggleMenu() {
+  var x = document.getElementById('mobile-menu');
+  if (x.className.indexOf('w3-show') == -1) {
+    x.className += ' w3-show';
+  } else { 
+    x.className = x.className.replace(' w3-show', '');
+  }
+}
+</script>
 
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge" style="color: black;"><span class="w3-padding w3-opacity-min"><b>Evolution </b></span></h1>
+    <h1 class="w3-xxlarge" style="color: black;"><span class="w3-padding w3-opacity-min"><b>Evolution</b></span></h1>
   </div>
 </header>
 

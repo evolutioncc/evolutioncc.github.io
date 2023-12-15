@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Evolution - Home page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+    background-image: url('brad-knight-huWlb1NP67w-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    height: 300px;
+}
+</style>
+</head>
+
+
+
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Evolution</b> Cycling Club</a>
+    <!-- Hidden links for mobile version -->
+    <div class="w3-right w3-hide-large w3-hide-medium">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleMenu()">☰</a>
+    </div>
+    <!-- Visible links for desktop version -->
+    <div class="navbar-links w3-right w3-hide-small">
+      <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+      <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+      <a href="#about" class="w3-bar-item w3-button">About Us</a>
+      <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Menu (hidden by default and toggled via hamburger icon) -->
+<div id="mobile-menu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+  <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+  <a href="#about" class="w3-bar-item w3-button">About Us</a>
+  <a href="#join" class="w3-bar-item w3-button">Join Us</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<!-- Script to toggle the mobile menu -->
+<script>
+function toggleMenu() {
+  var x = document.getElementById('mobile-menu');
+  if (x.className.indexOf('w3-show') == -1) {
+    x.className += ' w3-show';
+  } else { 
+    x.className = x.className.replace(' w3-show', '');
+  }
+}
+</script>
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge" style="color: black;"><span class="w3-padding w3-opacity-min"><b>Evolution </b></span></h1>
+  </div>
+</header>
+
+<!-- Add this code after your existing code -->
+<div class="center">
+  <section id="who-we-are">
+        <p class="center-text">We are a Chicago-based cycling team with a committed crew of racers and non-racers alike. We welcome newcomers to join us on one of our weekly rides. </p><p class = "center-text">Check out the rides page for more details!  </p></section>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+  document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    var links = document.querySelector('.navbar-links');
+    if (links.style.display === 'block') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'block';
+    }
+  });
+  </script>
+  </body>
+  </html>

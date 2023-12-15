@@ -1,52 +1,240 @@
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-  
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 70px; /* Adjust based on navbar height */
+  margin: 0;
+}
+
+.routes-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .route-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Add some space between routes */
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 20px;
 }
 
 .route-description {
-    flex: 1;
-    margin-right: 20px; /* Add some space between the description and the embed */
+  flex-basis: 60%;
+  padding-right: 20px;
 }
 
 .strava-embed {
-    flex: 1;
+  flex-basis: 40%;
+  transform: scale(1.0);
+  transform-origin: 0 0;
 }
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-    /*border: 3px solid black;
-    padding: 10px;*/
-  }
-  .center-text {
-    text-align: center;
-    font-size: 1.25em;
+
+h1, h2, h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .route-container {
+      flex-direction: column;
   }
 
-  .navbar-toggler {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
+  .strava-embed {
+      transform: none;
   }
+}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navbar links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive adjustments for the navbar */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  
+  .navbar a.navbar-toggler {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 14px 16px;
+    font-size: 24px;
+  }
+  
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
   .navbar-links {
+    float: none;
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .navbar-links a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .navbar-toggler {
     display: block;
   }
-  /* Show the navbar-toggler on screens smaller than 600px */
-  @media (max-width: 600px) {
-    .navbar-links {
-      display: none;
-    }
-    .navbar-toggler {
-      display: block;
-    }
+  
+  #mobile-menu {
+    display: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Optional: Adds a shadow for better visibility */
+    margin-top: 46px; /* Adjust this value as needed to fit your header's height */
   }
+  
+  .w3-show {
+    display: block !important;
+    padding-top: 60px; /* Adjust this value to match the height of your fixed header */
+  }
+  
+  .w3-top, .w3-hide-large, .w3-hide-medium {
+    z-index: 2; /* You might need to increase this value if the menu is still behind some elements */
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  padding-top: 70px; /* Adjust for fixed navbar */
+}
+
+.rides-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.ride-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.ride-section:last-child {
+  border-bottom: none;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+p strong {
+  color: #333;
+}
+
+/* Navigation bar styles */
+.w3-top {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.w3-bar-item {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Add responsive breakpoints as needed */
+@media (max-width: 600px) {
+  .rides-content {
+    padding: 1rem;
+  }
+  
+  .w3-bar-item, .navbar-toggler {
+    font-size: 0.9rem;
+  }
+}
 
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}

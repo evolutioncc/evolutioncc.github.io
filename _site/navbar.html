@@ -1,0 +1,39 @@
+<!-- navbar.html -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="index.html" class="w3-bar-item w3-button"><b> Evolution </b> </a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small navbar-links">
+        <a href="rides.html" class="w3-bar-item w3-button">Rides</a>
+        <a href="routes.html" class="w3-bar-item w3-button">Routes</a>
+        <a href="#roster" class="w3-bar-item w3-button">Roster</a>
+        <a href="#sponsors" class="w3-bar-item w3-button">Sponsors</a>
+      </div>
+      <span class="navbar-toggler">☰</span>
+    </div>
+  </div>
+  
+  <style>
+  /* Hide the navbar links on screens smaller than 600px */
+  @media (max-width: 600px) {
+    .navbar-links .w3-bar-item {
+      display: none;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+  }
+  </style>
+  
+  <script>
+  document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    var links = document.querySelectorAll('.navbar-links .w3-bar-item');
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].style.display === 'block') {
+        links[i].style.display = 'none';
+      } else {
+        links[i].style.display = 'block';
+      }
+    }
+  });
+  </script>
