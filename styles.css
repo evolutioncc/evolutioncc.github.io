@@ -32,14 +32,13 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
   .navbar-toggler {
     display: none;
     position: absolute;
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
   }
-
   
   /* Show the navbar-toggler on screens smaller than 600px */
   @media (max-width: 600px) {
-    .w3-bar-item {
+    .navbar-links {
       display: none;
     }
     .navbar-toggler {

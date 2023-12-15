@@ -55,13 +55,11 @@ header {
 
 <script>
   document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    var links = document.querySelectorAll('.navbar-links .w3-bar-item');
-    for (var i = 0; i < links.length; i++) {
-      if (links[i].style.display === 'block') {
-        links[i].style.display = 'none';
-      } else {
-        links[i].style.display = 'block';
-      }
+    var links = document.querySelector('.navbar-links');
+    if (links.style.display === 'block') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'block';
     }
   });
   </script>
