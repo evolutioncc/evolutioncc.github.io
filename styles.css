@@ -31,7 +31,11 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 
   .navbar-toggler {
     display: none;
+    position: absolute;
+  top: 0;
+  right: 0;
   }
+
   
   /* Show the navbar-toggler on screens smaller than 600px */
   @media (max-width: 600px) {
@@ -42,7 +46,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
       display: block;
     }
   }
-  
+
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
